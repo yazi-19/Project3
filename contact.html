@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with us for inquiries about our products, assistance, or feedback. RZF Software is here to help you.">
+    <title>Contact</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="logo rzf.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #66CDAA;
+            color: #fff;
+        }
+        header {
+            background-color: white;
+            color: #66CDAA;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: white;
+        }
+        nav ul li {
+            margin: 0.5rem;
+        }
+        nav ul li a {
+            color: #66CDAA;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #007BFF;
+        }
+       footer {
+            background-color: #66CDAA;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        @media (max-width: 767.98px) {
+            main {
+                margin: 1rem;
+                padding: 1rem;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            nav ul li a {
+                padding: 0.5rem;
+            }
+        }
+        footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 12px;
+    color: #666;
+}
+
+.footer-section {
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #66CDAA;
+}
+
+.social-icons li {
+
+    align-items: center;
+}
+
+.social-icons li a {
+  
+    align-items: center;
+}
+
+.social-icons li i {
+    margin-right: 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer-logo img {
+        margin: 0 auto 10px;
+    }
+}
+.logo-text-container {
+    display: flex;
+    align-items: center;
+}
+.whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .whatsapp-button img {
+            width: 60px; /* Sesuaikan ukuran */
+            height: 60px; /* Sesuaikan ukuran */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+   <header>
+    <center>
+           <img src="logo rzf.png" alt="Logo Perusahaan" width="80" height="auto">
+           </center>
+        <h1 class="text-center">Kontak Kami</h1>
+        <hr style="background-color: #66CDAA;">
+        <nav>
+            <ul class="d-flex justify-content-center flex-wrap">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="product.html">Produk</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="features.html">Fitur</a></li>
+                <li><a href="pricing.html">Harga</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="testimonials.html">Testimoni</a></li>
+            </ul>
+        </nav>
+    </header>
+    </main>
+    <div class="container">
+        <div class="contact-info">
+            <h2>Kontak Kami</h2>
+            <p><strong>Address:</strong><br>Jl. Raya Darma KM.11 Gunungluhur Darma<br>Kuningan, Jawa Barat 45562</p>
+            <p><strong>Phone:</strong> (0232 8900 548)</p>
+            <p><strong>Handphone:</strong> (0858 6477 2039)</p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Kirim Pesan</h2>
+            <p>Silakan isi form di bawah ini jika ada pertanyaan mengenai RZF Software!</p>
+            <form action="#" method="post">
+                <label for="nama">Nama *</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="nomor_handphone">Nomor Handphone *</label>
+                <input type="tel" id="nomor_handphone" name="nomor_handphone" required>
+
+                <label for="pesan_terkait">Pesan Terkait *</label>
+                <select id="pesan_terkait" name="pesan_terkait" required>
+                    <option value="" disabled selected>- Select -</option>
+                    <option value="support">Produk</option>
+                    <option value="sales">Aplication Develovment</option>
+                    <option value="other">Website Develovment</option>
+                    <option value="other">Grapich Desain</option>
+                    <option value="other">Lainnya</option>
+                </select>
+
+                <label for="subjek">Subjek</label>
+                <input type="text" id="subjek" name="subjek">
+
+                <label for="pesan">Pesan *</label>
+                <textarea id="pesan" name="pesan" rows="4" required></textarea>
+
+                <input type="submit" value="Kirim">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    .container {
+    display: flex;
+    background-color: #e9f1e9;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.contact-info, .contact-form {
+    width: 50%;
+    padding: 20px;
+}
+
+.contact-info h2, .contact-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-info p {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-form p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, select, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .contact-info p, .contact-form p {
+        font-size: 14px;
+    }
+
+    input, select, textarea {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    input[type="submit"] {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+    /* Membuat elemen peta responsif */
+        .map-container {
+            position: relative;
+            height: 0;
+            padding-bottom: 56.25%; /* Rasio 16:9 */
+            overflow: hidden;
+            max-width: 100%;
+            background: #eee;
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+</style>
+<h3>Lokasi Kami</h3>
+<div class="map-container">
+    <!-- Gantilah URL di bawah dengan URL peta yang diinginkan -->
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19816.958788160375!2d107.60116118337568!3d-6.912764137019794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e8b71e09e5ef%3A0x4b79cc40dc21bca4!2sBandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1692843574075!5m2!1sid!2sid"
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+</div>
+
+  <footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <center>
+            <img src="logo lutung.png" alt="RZF Software Logo">
+            <p>© 2024 RZF Software</p>
+            </center>
+        </div>
+        <div class="footer-section">
+            <h4><b>Tentang Kami</b></h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Produk</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="testimonials.html">Testimoni</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4><b>Produk</b></h4>
+            <ul>
+                <li><a href="rzfpam.html">RZF PAM</a></li>
+                <li><a href="rzfloket.html">RZF Loket</a></li>
+                <li><a href="rzfpercetakan.html">RZF Percetakan</a></li>
+                <li><a href="rzfskincare.html">RZF Skincare</a></li>
+                <li><a href="rzfminimarket.html">RZF Minimarket</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4><b>Lainnya</b></h4>
+            <ul>
+                <li><a href="features.html">Fitur</a></li>
+                <li><a href="pricing.html">Harga</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <center>
+            <h4><b>Temukan dan Ikuti Kami</b></h4>
+            <ul class="social-icons">
+                <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://wa.me/6283141170589"><i class="fa fa-whatsapp"></i> Whatsapp</a></li>
+            </ul>
+            </center>
+        </div>
+    </div>
+    <center>
+    <p>&copy;2024 RZF Software</p>
+    </center>
+</footer>
+  <a href="https://wa.me/6283141170589" class="whatsapp-button" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
+    </a>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

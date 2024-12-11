@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="icon" href="logo rzf.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+          margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #93b5e1, #a8e6cf);
+            color: black;
+        }
+        header {
+            background-color: white;
+            color: #66CDAA;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0.5rem;
+        }
+        nav ul li a {
+            color: #66CDAA;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #82a2c4;
+        }
+        .hero {
+            text-align: center;
+            background: url('path/to/your/hero-image.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 5rem 1rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+        font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .hero a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .hero a:hover {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+        .content-item {
+            background-color: #66CDAA;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+            margin: 1rem 0;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .content-item:hover {
+            transform: translateY(-10px);
+        }
+        .content-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3rem 1rem;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .hero a {
+                padding: 0.75rem 1.5rem;
+            }
+            .section h2 {
+                font-size: 1.5rem;
+            }
+            .section p {
+                font-size: 0.9rem;
+            }
+            nav ul li a {
+                padding: 0.5rem 0.75rem;
+            }
+        }
+           .button-link {
+             background: linear-gradient(to right, #d3d3d3, #a9a9a9);   /* Warna dasar tombol */
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px; /* Membuat sudut membulat */
+            transition: background-color 0.3s, transform 0.3s; /* Transisi untuk animasi */
+        }
+
+        .button-link:hover {
+            background: linear-gradient(to right, #00b4db, #0083b0); /* Warna saat di-hover */
+            transform: scale(1.1); /* Skala sedikit lebih besar saat di-hover */
+             border-radius: 4px; /* Membuat sudut membulat */
+        }
+footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 12px;
+    color: #666;
+}
+
+.footer-section {
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #66CDAA;
+}
+
+.social-icons li {
+
+    align-items: center;
+}
+
+.social-icons li a {
+  
+    align-items: center;
+}
+
+.social-icons li i {
+    margin-right: 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer-logo img {
+        margin: 0 auto 10px;
+    }
+}
+.logo-text-container {
+    display: flex;
+    align-items: center;
+}
+      .main-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: scale(0.9);
+      animation: fadeInScaleUp 1.2s ease-out forwards;
+    }
+
+    @keyframes fadeInScaleUp {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    } 
+</style>
+</head>
+<body>
+    <header>
+        <center>
+           <img src="logo rzf.png" alt="Logo Perusahaan" width="100" height="auto">
+           </center>
+        <h1 class="text-center">Selamat Datang</h1>
+        <hr style="background-color: #66CDAA;">
+        <nav>
+            <ul class="d-flex justify-content-center flex-wrap">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="product.html">Produk</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="features.html">Fitur</a></li>
+                <li><a href="pricing.html">Harga</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="testimonials.html">Testimoni</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="hero">
+            <h2 style="color: black; margin-top: -50px;">Aplikasi Kasir Terbaik untuk Bisnis Anda</h2>
+            <p style="color: black; ">Optimalkan manajemen bisnis Anda dengan aplikasi kasir kami yang canggih dan mudah digunakan.</p>
+           <a href="features.html" class="button-link">Detail</a>
+        </section>
+        <section class="section">
+            <h2 style="margin-top: -50px; ">Apa Itu Aplikasi Kasir?</h2>
+            <p style="margin: -10px;">Aplikasi kasir adalah perangkat lunak yang membantu dalam memproses transaksi penjualan di berbagai jenis bisnis. Aplikasi ini tidak hanya mempermudah proses pembayaran, tetapi juga menyediakan berbagai fitur penting seperti manajemen inventaris, pelacakan penjualan, analisis data, dan laporan keuangan. Dengan menggunakan aplikasi kasir, bisnis Anda dapat berjalan lebih efisien, meningkatkan akurasi dalam pencatatan, dan memberikan pengalaman yang lebih baik bagi pelanggan.</p>
+        </section>
+
+
+        <section class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="content-item">
+                    <img src="https://www.rzfsoftware.com/sites/default/files/cover-website-minimarket.png" alt="Contoh Gambar" width="400" height="400">
+                    <a href="product.html" class="button-link">RZF Minimarket</a>
+                    <p>Software aplikasi yang didesain untuk minimarket, sistem yang bisa digunakan untuk memudahkan transaksi.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="content-item">
+ <img src="https://www.rzfsoftware.com/sites/default/files/cover-toko-retail.jpg" alt="Contoh Gambar" width="400" height="400">
+                    <a href="product.html" class="button-link">RZF Retail</a>
+                    <p>Software aplikasi yang didesain khusus untuk toko dengan penjualan langsung pada konsumen atau eceran.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="content-item">
+ <img src="https://www.rzfsoftware.com/sites/default/files/cover-rzf-toko-grosir.jpg" alt="Contoh Gambar" width="400" height="400">
+                    <a href="product.html" class="button-link">RZF Toko Grosir </a>
+                    <p>Software aplikasi yang didesain khusus untuk toko dengan penjualan lebih dari satu jenis pelanggan.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Apakah Ini Masalah Bisnis Anda?</h2>
+            <center>
+              <img src="https://www.banyumedia.co.id/wp-content/uploads/2021/11/Kendala-Bisnis-Online-dan-Solusinya-2.webp" height="200"width="300"; alt="Deskripsi Gambar">
+            </center>
+              <p>Kami memahami bahwa menjalankan bisnis dapat memiliki banyak tantangan. Dari manajemen inventaris hingga layanan pelanggan, kami ada di sini untuk membantu Anda mengatasi semua masalah tersebut dengan solusi yang inovatif dan efektif.</p>
+        </section>
+        <section class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="content-item">
+                    <img src="https://images.pexels.com/photos/8190803/pexels-photo-8190803.jpeg?auto=compress&cs=tinysrgb&w=600" height="300"width="600"; alt="Deskripsi Gambar">
+                    <h4>Solusi Manajemen Inventaris</h4>
+                    <p style="font-size: 17px;">Optimalkan stok dan kurangi biaya dengan sistem manajemen inventaris kami.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="content-item">
+                    <img src="https://images.pexels.com/photos/3823488/pexels-photo-3823488.jpeg?auto=compress&cs=tinysrgb&w=600" height="300"width="600"; alt="Deskripsi Gambar">
+                    <h4>Solusi Layanan Pelanggan</h4>
+                    <p>Tingkatkan kepuasan pelanggan dengan layanan pelanggan yang responsif dan efisien.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="content-item">
+                    <img src="https://images.pexels.com/photos/7567535/pexels-photo-7567535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height="300"width="400"; alt="Deskripsi Gambar">
+                    <h3>Solusi Pemasaran Digital</h3>
+                    <p>Perluas jangkauan pasar Anda dengan strategi pemasaran digital kami yang terintegrasi.</p>
+                </div>
+            </div>
+        </section>
+         
+         </style>
+    </main>
+  <footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <center>
+            <img src="logo rzf.png" alt="RZF Software Logo">
+            <p>
+                <span>2024</span>
+                <span style="color: #92D050;">RZF</span>
+            <span style="color: #00B050;">  Software</p></span>
+            </center>
+        </div>
+        <div class="footer-section">
+            <h4><b>Tentang Kami</b></h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Produk</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="testimonials.html">Testimoni</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4><b>Produk</b></h4>
+            <ul>
+                <li><a href="rzfpam.html">RZF PAM</a></li>
+                <li><a href="rzfloket.html">RZF Loket</a></li>
+                <li><a href="rzfpercetakan.html">RZF Percetakan</a></li>
+                <li><a href="rzfskincare.html">RZF Skincare</a></li>
+                <li><a href="rzfminimarket.html">RZF Minimarket</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4><b>Lainnya</b></h4>
+            <ul>
+                <li><a href="features.html">Fitur</a></li>
+                <li><a href="pricing.html">Harga</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <center>
+            <h4><b>Temukan dan Ikuti Kami</b></h4>
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/people/Andrea-Yazid-Muttaqin/pfbid0yLewHCPWYb9Z5CML7sqJexFjWQKemyWoDVZ6azejEdRD8mQG8c1d5Wqb83Vr9E3hl/"><i class="fa fa-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://www.instagram.com/andrea_yazid19/"><i class="fa fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://wa.me/6283141170589"><i class="fa fa-whatsapp"></i> Whatsapp</a></li>
+            </ul>
+            </center>
+        </div>
+    </div>
+</footer>
+
+  <a href="https://wa.me/6283141170589" class="whatsapp-button" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
+    </a>
+         <style>
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .whatsapp-button img {
+            width: 60px; /* Sesuaikan ukuran */
+            height: 60px; /* Sesuaikan ukuran */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+        }
+    </style>
+    <!-- Bootstrap JS dan dependensi -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

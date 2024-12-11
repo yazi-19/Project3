@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read the testimonials from our satisfied customers who have benefited from using our RZF Software for their businesses.">
+    <title>Testimoni Pelanggan</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="icon" href="logo rzf.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #66CDAA;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: white;
+            color: #66CDAA;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: white;
+        }
+        nav ul li {
+            margin: 0.5rem;
+        }
+        nav ul li a {
+            color: #66CDAA;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #007BFF;
+        }
+        main {
+            padding: 2rem;
+            margin: 2rem;
+            background-color: #66CDAA;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .section h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .testimonial {
+            background-color: #4CAF50;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+            padding: 1rem;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .testimonial:hover {
+            transform: translateY(-10px);
+        }
+        .testimonial p {
+            font-style: italic;
+            color: #fff;
+        }
+        .testimonial h3 {
+            margin-top: 1rem;
+            color: #fff;
+        }
+ footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 12px;
+    color: #666;
+}
+
+.footer-section {
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #66CDAA;
+}
+
+.social-icons li {
+
+    align-items: center;
+}
+
+.social-icons li a {
+  
+    align-items: center;
+}
+
+.social-icons li i {
+    margin-right: 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer-logo img {
+        margin: 0 auto 10px;
+    }
+}
+.logo-text-container {
+    display: flex;
+    align-items: center;
+}
+         .button {
+            background-color: orange; /* Warna dasar tombol */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s; /* Transisi untuk animasi */
+        }
+
+        .button:hover {
+            background-color: #45a049; /* Warna saat di-hover */
+            transform: scale(1.1); /* Skala sedikit lebih besar */
+        }
+.testimoni {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    max-width: 400px;
+    margin: auto;
+}
+
+.rating {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.star {
+    color: #ccc;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.star:hover,
+.star.selected {
+    color: gold;
+    transform: scale(1.2);
+}
+
+.star.anim {
+    animation: sparkle 1s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold, 0 0 20px gold;
+    }
+    50% {
+        text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold, 0 0 40px gold;
+    }
+}
+
+.rating-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .whatsapp-button img {
+            width: 60px; /* Sesuaikan ukuran */
+            height: 60px; /* Sesuaikan ukuran */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+
+<body>
+        <header>
+            <center>
+           <img src="logo rzf.png" alt="Logo Perusahaan" width="80" height="auto">
+           </center>
+        <h1 class="text-center">Testimoni</h1>
+        <hr style="background-color: #66CDAA;">
+        <nav>
+            <ul class="d-flex justify-content-center flex-wrap">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="product.html">Produk</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="features.html">Fitur</a></li>
+                <li><a href="pricing.html">Harga</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="testimonials.html">Testimoni</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container my-4">
+        <div class="section">
+            <h2>Testimoni Pelanggan Kami</h2>
+            <div class="row testimonials">
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial">
+                        <p>"Aplikasi kasir ini sangat membantu bisnis saya. Mudah digunakan dan fitur-fiturnya lengkap!"</p>
+                        <h3>- <b>Budi</b>, <i>Pemilik Toko Sembako</i></h3>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial">
+                        <p>"Pelayanan yang diberikan sangat memuaskan. Tim supportnya sangat responsif dan membantu."</p>
+                        <span class="star filled color: gold;" >&#9733;&#9733;&#9733;&#9733;</span>
+                        <h3>- <b>Siti</b>, <i>Pemilik Restoran</i></h3>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial">
+                        <p>"Sistem kasir yang sangat efisien. Saya bisa mengelola stok dan penjualan dengan lebih mudah."</p>
+                        <span class="star filled">&#9733;&#9733;&#9733;&#9733;</span>
+                        <h3>- <b>Andi</b>, <i>Pemilik Toko konveksi</i></h3>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial">
+                        <p>"Integrasi dengan sistem accounting sangat memudahkan dalam laporan keuangan bulanan."</p>
+                        <h3>- <b>Lila</b>, <i>Pemilik Percetakan</i></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+  <footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <center>
+            <img src="logo rzf.png" alt="RZF Software Logo">
+            <p>© 2024 RZF Software</p>
+            </center>
+        </div>
+        <div class="footer-section">
+            <h4><b>Tentang Kami</b></h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Produk</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="testimonials.html">Testimoni</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4><b>Produk</b></h4>
+            <ul>
+                <li><a href="rzfpam.html">RZF PAM</a></li>
+                <li><a href="rzfloket.html">RZF Loket</a></li>
+                <li><a href="rzfpercetakan.html">RZF Percetakan</a></li>
+                <li><a href="rzfskincare.html">RZF Skincare</a></li>
+                <li><a href="rzfminimarket.html">RZF Minimarket</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4><b>Lainnya</b></h4>
+            <ul>
+                <li><a href="features.html">Fitur</a></li>
+                <li><a href="pricing.html">Harga</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <center>
+            <h4><b>Temukan dan Ikuti Kami</b></h4>
+            <ul class="social-icons">
+                <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://wa.me/6283141170589"><i class="fa fa-whatsapp"></i> Whatsapp</a></li>
+            </ul>
+            </center>
+        </div>
+    </div>
+    <center>
+    <p>&copy;2024 RZF Software</p>
+    </center>
+</footer>
+       <a href="https://wa.me/6283141170589" class="whatsapp-button" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
+    </a>
+    <script>
+     document.querySelectorAll('.star').forEach(star => {
+    star.addEventListener('click', function() {
+        let rating = this.getAttribute('data-rating');
+        document.getElementById('rating-value').textContent = rating;
+
+        // Remove the 'selected' class from all stars
+        document.querySelectorAll('.star').forEach(star => star.classList.remove('selected'));
+        
+        // Add the 'selected' class to the clicked star and all stars before it
+        this.classList.add('selected');
+        let previousStar = this.previousElementSibling;
+        while (previousStar) {
+            previousStar.classList.add('selected');
+            previousStar = previousStar.previousElementSibling;
+        }
+        
+        // Add sparkle animation to the selected stars
+        document.querySelectorAll('.star.selected').forEach(star => star.classList.add('anim'));
+    });
+});
+</script>
+ 
+    </script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
